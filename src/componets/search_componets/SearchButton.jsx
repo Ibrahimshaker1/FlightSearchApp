@@ -157,6 +157,7 @@ function SearchButton(props){
 	
 	async function searchButtonClicked(){
 		if(props.tripState == "oneway"){
+			props.setResultState([])
 			props.setAppTrip("oneway")
 			const oneWayresults = takeDataOneWay();
 			const oneUseDate = new Date(oneWayresults["oneDate"])
@@ -189,6 +190,7 @@ function SearchButton(props){
 				}
 			}
 		}else if(props.tripState == "twoway"){
+			props.setResultState([])
 			props.setAppTrip("twoway")
 			const twoWayResults = takeDataTowWay();
 			const goDate = new Date(twoWayResults["oneDate"]);

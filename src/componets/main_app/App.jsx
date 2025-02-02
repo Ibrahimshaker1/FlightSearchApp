@@ -63,10 +63,14 @@ function App () {
 
 	useEffect( () => {
 		setTimeout(()=>{
-			const resultDivs = document.querySelectorAll(".result-div")
-			resultDivs.forEach((item) => {
-				observer.observe(item);
-			});
+			try{
+				const resultDivs = document.querySelectorAll(".result-div")
+				resultDivs.forEach((item) => {
+					observer.observe(item);
+				});
+			}catch{
+					
+			}
 		}, 1000)
 	}, [resultList])
 

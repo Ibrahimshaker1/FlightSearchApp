@@ -161,10 +161,10 @@ function OneTrip(props){
 	}
 
 	useEffect(()=> {
-		// function exGetCityName(){
-		// 	getLogLat();
-		// }
-		// exGetCityName()
+		function exGetCityName(){
+			getLogLat();
+		}
+		exGetCityName()
 	}, [])
 
 	return(
